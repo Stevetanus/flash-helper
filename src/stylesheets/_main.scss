@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $font-family-base;
 }
 
 img {
@@ -16,13 +17,44 @@ body {
 }
 
 .wrap {
-  width: 95vw;
-  margin: 1rem auto;
+  margin: 1rem 1rem;
+  .header {
+    display: flex;
+    margin: 0 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.25em;
+    .form {
+      display: flex;
+      align-items: center;
+      .search {
+        margin-right: 1em;
+        select {
+          font-size: 1.25em;
+        }
+      }
+      .submit {
+        font-size: 2rem;
+        button {
+          padding: 0.5rem;
+          border-radius: 10%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .card__grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   //   align-items: center;
   //   grid-template-columns: repeat(3, fit-content);
   gap: 0.5rem;
@@ -53,8 +85,8 @@ body {
   --rotate-y: 180deg;
 }
 
-.card__front {
-  //   left: 0;
+.card__options {
+  margin-top: 1rem;
 }
 .card__front,
 .card__back {

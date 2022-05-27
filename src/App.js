@@ -85,7 +85,9 @@ function App() {
           </div>
           <form className="form" onSubmit={handleSubmit}>
             <div className="search">
-              <label htmlFor="category">題型</label>
+              <label htmlFor="category">
+                <h2>題型</h2>
+              </label>
               <select name="category" id="category" ref={categoryEl}>
                 {categories.map((category) => {
                   return (
